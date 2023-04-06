@@ -21,3 +21,15 @@ print("Length = ", length, "Width = ", width, "Height = ", height)
 print("Total Surface Area = ", surface_area)
 
 #end
+
+
+def rect_area(length, width):
+    return length * width
+
+def rect_surface_area(length, width, height):
+    face1 = rect_area(length, width)
+    face2 = rect_area(length, height)
+    face3 = rect_area(width, height)
+    # Compute the total surface area by adding up the areas of each face
+    return 2 * (face1 + face2 + face3)
+
